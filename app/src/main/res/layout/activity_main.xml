@@ -4,18 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".activties.MainActivity">
 
-   <com.google.android.material.appbar.AppBarLayout
-       android:layout_width="match_parent"
-       android:background="@color/colorPrimaryDark"
-       android:layout_height="?attr/actionBarSize">
-       <com.google.android.material.appbar.MaterialToolbar
-           android:id="@+id/toolBar"
-           app:title="@string/lbl_discover"
-           app:titleTextColor="@color/white"
-           app:titleCentered="true"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
-   </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="@string/lbl_discover"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_banner">
+
+            </androidx.viewpager2.widget.ViewPager2>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
