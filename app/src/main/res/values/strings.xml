@@ -6,4 +6,7 @@
     <string name="movie_name">Westworld</string>
     <string name="check_movie_showtimes">Check Movies\nShowtimes</string>
     <string name="lbl_see_more"><u>SEE MORE</u></string>
+    <string name="showcases">SHOWCASES</string>
+    <string name="lbl_more_showcase"><u>MORE SHOWCASES</u></string>
+    <string name="lbl_passengers">Passengers</string>
 </resources>

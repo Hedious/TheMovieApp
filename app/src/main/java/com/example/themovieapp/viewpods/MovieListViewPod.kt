@@ -12,15 +12,15 @@ class MovieListViewPod @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
 
-    lateinit var mMovieAdaper : MovieAdapter;
+    lateinit var mMovieAdapter : MovieAdapter;
     override fun onFinishInflate() {
         setUpMovieRecyclerView()
         super.onFinishInflate()
     }
 
     private fun setUpMovieRecyclerView(){
-        mMovieAdaper = MovieAdapter()
-        rvMovieList.adapter = mMovieAdaper
+        mMovieAdapter = MovieAdapter()
+        rvMovieList.adapter = mMovieAdapter
         rvMovieList.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
     }
 }

@@ -27,6 +27,7 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
+            android:paddingBottom="@dimen/margin_large"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -133,6 +134,7 @@
                 app:tabTextColor="@color/colorSecondaryText" />
 
             <FrameLayout
+                android:id="@+id/flMovieByGenre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tabLayoutGenre"
@@ -145,6 +147,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </FrameLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShowCaseLabel"
+                android:layout_below="@id/flMovieByGenre"
+                android:layout_width="wrap_content"
+                android:text="@string/showcases"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_height="wrap_content"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMoreShowcasesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/lbl_more_showcase"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_alignBaseline="@id/tvShowCaseLabel"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShowcases"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:layout_below="@id/tvShowCaseLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>

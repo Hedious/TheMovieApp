@@ -3,8 +3,11 @@ package com.example.themovieapp.activties
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.themovieapp.R
 import com.example.themovieapp.adapters.BannerAdapter
+import com.example.themovieapp.adapters.ShowCaseAdapter
 import com.example.themovieapp.dummy.dummyGenreList
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
@@ -13,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity() : AppCompatActivity() {
 
     lateinit var mBannerAdapter: BannerAdapter
+    lateinit var mShowCaseAdapter: ShowCaseAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +25,7 @@ class MainActivity() : AppCompatActivity() {
         setUpToolBar()
         setUpBannerViewPager()
         setUpGenreTabLayout()
+        setUpShowCaseViewPager()
 
         setUpListeners()
     }
@@ -74,5 +79,11 @@ class MainActivity() : AppCompatActivity() {
             tab.text = it
             tabLayoutGenre.addTab(tab)
         }
+    }
+
+    private fun setUpShowCaseViewPager(){
+        mShowCaseAdapter = ShowCaseAdapter();
+        rvShowcases.adapter =  mShowCaseAdapter
+        rvShowcases.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
     }
 }

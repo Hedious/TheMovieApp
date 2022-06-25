@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/width_showcase"
+    android:layout_marginStart="@dimen/margin_card_medium_2"
+    android:layout_height="@dimen/height_showcase">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivShowCase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_wolverine_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPlay"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:elevation="@dimen/margin_medium"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:backgroundTint="@color/colorAccent"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="@dimen/margin_large"
+        app:icon="@drawable/ic_baseline_play_arrow_black_24"
+        app:iconPadding="0dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShowCaseMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvShowCaseMovieDate"
+        android:layout_alignStart="@id/tvShowCaseMovieDate"
+        android:text="@string/lbl_passengers"
+        android:textColor="@color/white"
+        android:elevation="@dimen/margin_medium"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShowCaseMovieDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:elevation="@dimen/margin_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:text="15 DECEMBER 2016"
+        android:textColor="@color/colorSecondaryText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000"
+        android:elevation="@dimen/margin_small"/>
+
+
+</RelativeLayout>

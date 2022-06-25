@@ -34,4 +34,6 @@
     <dimen name="width_movie_item">128dp</dimen>
     <dimen name="height_movie_image">180dp</dimen>
     <dimen name="height_check_movie_show_time">180dp</dimen>
+    <dimen name="width_showcase">260dp</dimen>
+    <dimen name="height_showcase">180dp</dimen>
 </resources>
