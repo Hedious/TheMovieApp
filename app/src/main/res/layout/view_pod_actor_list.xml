@@ -5,13 +5,36 @@
     android:paddingBottom="@dimen/margin_medium_2"
     android:paddingTop="@dimen/margin_large"
     android:layout_height="wrap_content">
-<TextView
+<androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/tvBestActor"
     android:text="BEST ACTOR"
     android:textColor="@color/colorSecondaryText"
     android:textStyle="bold"
+    android:layout_marginStart="@dimen/margin_medium_2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMoreActors"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@id/tvBestActor"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:text="@string/lbl_more_actors"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvActors"
+      android:layout_marginTop="@dimen/margin_card_medium_2"
+      android:layout_below="@id/tvMoreActors"
+      android:paddingEnd="@dimen/margin_card_medium_2"
+      android:clipToPadding="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+
 
 </com.example.themovieapp.viewpods.ActorListViewPod>

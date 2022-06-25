@@ -27,9 +27,9 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
-            android:paddingBottom="@dimen/margin_large"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_large">
 
             <FrameLayout
                 android:id="@+id/flBanner"
@@ -147,37 +147,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </FrameLayout>
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvShowCaseLabel"
-                android:layout_below="@id/flMovieByGenre"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flMovieByGenre"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
                 android:text="@string/showcases"
                 android:textColor="@color/colorSecondaryText"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/margin_medium_3"
-                android:layout_marginStart="@dimen/margin_medium_2"
-                android:layout_height="wrap_content"
-                />
+                android:textStyle="bold" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvMoreShowcasesLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:text="@string/lbl_more_showcase"
-                android:layout_marginEnd="@dimen/margin_medium_2"
                 android:layout_alignBaseline="@id/tvShowCaseLabel"
-                />
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="@string/lbl_more_showcase"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvShowcases"
-                android:layout_marginTop="@dimen/margin_medium_3"
-                android:paddingEnd="@dimen/margin_medium_2"
-                android:clipToPadding="false"
-                android:layout_below="@id/tvShowCaseLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:layout_below="@id/tvShowCaseLabel"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2" />
+
+            <include
+                android:id="@+id/vpActorList"
+                layout="@layout/view_pod_actor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvShowcases"
+                android:layout_marginTop="@dimen/margin_medium_2" />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
