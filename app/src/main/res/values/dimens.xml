@@ -38,4 +38,6 @@
     <dimen name="height_showcase">180dp</dimen>
     <dimen name="width_actor">150dp</dimen>
     <dimen name="height_actor">180dp</dimen>
+    <dimen name="height_collapsing_toolbar_movie_detail">300dp</dimen>
+    <dimen name="width_release_year">72dp</dimen>
 </resources>

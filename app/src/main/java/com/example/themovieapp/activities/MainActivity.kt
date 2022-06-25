@@ -1,10 +1,9 @@
-package com.example.themovieapp.activties
+package com.example.themovieapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.themovieapp.R
 import com.example.themovieapp.adapters.BannerAdapter
 import com.example.themovieapp.adapters.ShowCaseAdapter
@@ -102,18 +101,21 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
     }
 
     override fun onTapMovieFromBanner() {
-        Snackbar.make(window.decorView, "Tapped Movie From Banner", Snackbar.LENGTH_LONG).show()
+        //Snackbar.make(window.decorView, "Tapped Movie From Banner", Snackbar.LENGTH_LONG).show()
+        startActivity(MovieDetailsActivity.newIntent(this))
     }
 
     override fun onTapMovieFromShowcase() {
-        Snackbar.make(window.decorView, "Tapped Movie From Showcase", Snackbar.LENGTH_LONG).show()
+        //Snackbar.make(window.decorView, "Tapped Movie From Showcase", Snackbar.LENGTH_LONG).show()
+        startActivity(MovieDetailsActivity.newIntent(this))
     }
 
     override fun onTapMovie() {
-        Snackbar.make(
-            window.decorView,
-            "Tapped Movie From Best Popular Movies or Movies By Genre",
-            Snackbar.LENGTH_LONG
-        ).show()
+//        Snackbar.make(
+//            window.decorView,
+//            "Tapped Movie From Best Popular Movies or Movies By Genre",
+//            Snackbar.LENGTH_LONG
+//        ).show()
+        startActivity(MovieDetailsActivity.newIntent(this))
     }
 }

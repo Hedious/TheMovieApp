@@ -1,9 +1,11 @@
 package com.example.themovieapp.viewpods
 
 import android.content.Context
+import android.graphics.Paint
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.themovieapp.adapters.ActorAdapter
 import com.example.themovieapp.adapters.MovieAdapter
@@ -22,7 +24,17 @@ class ActorListViewPod @JvmOverloads constructor(
     private fun setUpActorRecyclerView() {
         mActorAdapter = ActorAdapter()
         rvActors.adapter = mActorAdapter
-        rvActors.layoutManager = LinearLayoutManager(context, LinearLayout.HORIZONTAL, false)
+        rvActors.layoutManager = LinearLayoutManager(
+            context,
+            LinearLayoutManager.HORIZONTAL, false
+        )
+    }
+
+    fun setUpActorViewPod(backgroundColorReference: Int, titleText: String, moreTitleText: String) {
+        setBackgroundColor(ContextCompat.getColor(context, backgroundColorReference))
+        tvBestActor.text = titleText
+        tvMoreActors.text = moreTitleText
+        tvMoreActors.paintFlags = Paint.UNDERLINE_TEXT_FLAG
     }
 
 }
