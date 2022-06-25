@@ -2,4 +2,8 @@
     <string name="app_name">TheMovieApp</string>
     <string name="lbl_search">Search</string>
     <string name="lbl_discover">Discorver</string>
+    <string name="lbl_best_popular_films_and_serials_label">BEST POPULAR FILMS AND SERIALS</string>
+    <string name="movie_name">Westworld</string>
+    <string name="check_movie_showtimes">Check Movies\nShowtimes</string>
+    <string name="lbl_see_more"><u>SEE MORE</u></string>
 </resources>

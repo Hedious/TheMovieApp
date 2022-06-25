@@ -31,4 +31,7 @@
 
     <!-- App Specific Dimension -->
     <dimen name="height_banner">250dp</dimen>
+    <dimen name="width_movie_item">128dp</dimen>
+    <dimen name="height_movie_image">180dp</dimen>
+    <dimen name="height_check_movie_show_time">180dp</dimen>
 </resources>
