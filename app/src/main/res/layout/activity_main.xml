@@ -175,7 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvShowCaseLabel"
-                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_card_medium_2"
                 android:clipToPadding="false"
                 android:paddingEnd="@dimen/margin_medium_2" />
 
@@ -185,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rvShowcases"
-                android:layout_marginTop="@dimen/margin_medium_2" />
+                android:layout_marginTop="@dimen/margin_medium_3" />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
