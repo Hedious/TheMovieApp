@@ -2,5 +2,5 @@ package com.example.themovieapp.delegate
 
 interface BannerViewHolderDelegate {
 
-    fun onTapMovieFromBanner()
+    fun onTapMovieFromBanner(movieId :Int)
 }

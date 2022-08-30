@@ -128,7 +128,7 @@
                 android:layout_below="@id/rlCheckMovieShowTimes"
                 android:layout_marginTop="@dimen/margin_medium_3"
                 android:background="@color/colorPrimary"
-                app:tabIndicator="@color/colorAccent"
+                app:tabIndicatorColor="@color/colorAccent"
                 app:tabMode="scrollable"
                 app:tabSelectedTextColor="@color/white"
                 app:tabTextColor="@color/colorSecondaryText" />

@@ -43,5 +43,27 @@ data class MovieVO(
     val voteAverage: Double?,
 
     @SerializedName("vote_count")
-    val voteCount: Int = 0,
-)
+    val voteCount: Int?,
+
+    @SerializedName("production_companies")
+    val productionCompanies: List<ProductionCompanyVO>?,
+
+    @SerializedName("production_countries")
+    val productionCountries: List<ProductionCountryVO>?,
+
+    @SerializedName("revenue")
+    val revenue: Int?,
+
+    @SerializedName("status")
+    val status: String?,
+
+    @SerializedName("tagLine")
+    val tagLine: String?,
+
+    @SerializedName("spoken_languages")
+    val spokenLanguages: List<SpokenLanguageVO>?
+) {
+    fun getRatingBaseOnFiveStars(): Float {
+        return voteAverage?.div(2)?.toFloat() ?: 0.0f
+    }
+}
