@@ -187,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rvShowcases"
                 android:layout_marginTop="@dimen/margin_medium_3" />
-
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

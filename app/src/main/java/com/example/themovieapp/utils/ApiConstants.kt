@@ -18,3 +18,6 @@ const val PARAM_API_KEY = "api_key"
 const val PARAM_PAGE = "page"
 const val PARAM_GENRE_ID = "with_genres"
 const val MOVIE_API_KEY = "796cfa2129ec05e40fc9e16d6f1ea990"
+const val PARAM_QUERY = "query"
+
+const val API_SEARCH_MOVIE = "/3/search/movie"

@@ -3,6 +3,7 @@ package com.example.themovieapp.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.themovieapp.R
 import com.example.themovieapp.adapters.BannerAdapter
@@ -17,7 +18,6 @@ import com.example.themovieapp.delegate.ShowcaseViewHolderDelegate
 import com.example.themovieapp.dummy.dummyGenreList
 import com.example.themovieapp.network.dataagents.MovieDataAgentImpl
 import com.example.themovieapp.network.dataagents.OkHttpDataAgentImpl
-import com.example.themovieapp.network.dataagents.RetrofitDataAgentImpl
 import com.example.themovieapp.viewpods.ActorListViewPod
 import com.example.themovieapp.viewpods.MovieListViewPod
 import com.google.android.material.snackbar.Snackbar
@@ -74,33 +74,23 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
     }
 
     private fun requestData() {
-        mMovieModel.getNowPlayingMovies(
-            onSuccess = {
-                mBannerAdapter.setNewData(it)
+        mMovieModel.getNowPlayingMovies{
+            showError(it)
+        }?.observe(this, Observer {
+            mBannerAdapter.setNewData(it)
+        })
 
-            },
-            onFailure = {
-                showError(it)
-            }
-        )
+        mMovieModel.getPopularMovies{
+            showError(it)
+        }?.observe(this, Observer {
+            mBestPopularMovieListViewPod.setData(it)
+        })
 
-        mMovieModel.getPopularMovies(
-            onSuccess = {
-                mBestPopularMovieListViewPod.setData(it)
-            },
-            onFailure = {
-                showError(it)
-            }
-        )
-
-        mMovieModel.getTopRatedMovies(
-            onSuccess = {
-                mShowCaseAdapter.setNewData(it)
-            },
-            onFailure = {
-                showError(it)
-            }
-        )
+        mMovieModel.getTopRatedMovies{
+            showError(it)
+        }?.observe(this, Observer {
+            mShowCaseAdapter.setNewData(it)
+        })
 
         mMovieModel.getGenres(
             onSuccess = {
@@ -125,6 +115,10 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
                 showError(it)
             }
         )
+
+        toolBar.setOnClickListener {
+            startActivity(MovieSearchActivity.newIntent(this))
+        }
     }
 
     private fun showError(message: String) {

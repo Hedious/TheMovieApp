@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.themovieapp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".MovieApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,9 +16,15 @@
         android:theme="@style/Theme.TheMovieApp"
         tools:targetApi="31">
         <activity
-            android:name=".activities.MovieDetailsActivity"
+            android:name=".activities.MovieSearchActivity"
             android:theme="@style/Theme.TheMovieApp.TransparentStatusBar"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".activities.MovieDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TheMovieApp.TransparentStatusBar" />
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">

@@ -1,5 +1,6 @@
 package com.example.themovieapp.network.dataagents
 
+import android.graphics.Movie
 import android.hardware.camera2.CaptureFailure
 import com.example.themovieapp.data.vos.ActorVO
 import com.example.themovieapp.data.vos.GenreVO
@@ -34,6 +35,18 @@ interface MovieDataAgent {
 
     fun getActors(
         onSuccess: (List<ActorVO>) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun getMovieDetails(
+        movieId: String,
+        onSuccess: (MovieVO) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun getCreditsByMovie(
+        movieId: String,
+        onSuccess: (Pair<List<ActorVO>,List<ActorVO>>) -> Unit,
         onFailure: (String) -> Unit
     )
 

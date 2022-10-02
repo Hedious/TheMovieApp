@@ -44,10 +44,11 @@
                 android:src="@drawable/ic_search" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMovieDetails"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/placeholder_wolverine_image"
+                tools:src="@drawable/placeholder_wolverine_image"
                 app:layout_collapseMode="parallax" />
 
             <View
@@ -62,7 +63,7 @@
                 app:layout_collapseMode="parallax">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvMovieName"
+                    android:id="@+id/tvMovieDetailName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -76,12 +77,13 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="@dimen/width_release_year"
                     android:layout_height="@dimen/margin_xlarge"
-                    android:layout_above="@id/tvMovieName"
-                    android:layout_alignStart="@id/tvMovieName"
+                    android:layout_above="@id/tvMovieDetailName"
+                    android:layout_alignStart="@id/tvMovieDetailName"
                     android:layout_marginBottom="@dimen/margin_medium_2"
                     android:background="@drawable/background_release_year"
                     android:gravity="center"
                     android:text="2016"
+                    android:id="@+id/tvMovieReleaseYear"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
@@ -89,7 +91,7 @@
                     android:id="@+id/tvRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/tvMovieName"
+                    android:layout_above="@id/tvMovieDetailName"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="@dimen/margin_medium_2"
                     android:layout_marginBottom="@dimen/margin_medium"
@@ -98,6 +100,7 @@
                     android:textSize="@dimen/text_big" />
 
                 <RatingBar
+                    android:id="@+id/rbRatingMovieDetails"
                     style="@style/Widget.AppCompat.RatingBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -111,7 +114,7 @@
                     android:id="@+id/tvNumberOfVotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/tvMovieName"
+                    android:layout_above="@id/tvMovieDetailName"
                     android:layout_marginEnd="@dimen/margin_medium"
                     android:layout_marginBottom="@dimen/margin_card_medium_2"
                     android:layout_toStartOf="@id/tvRating"

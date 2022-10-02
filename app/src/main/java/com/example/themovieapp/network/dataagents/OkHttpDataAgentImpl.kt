@@ -55,6 +55,22 @@ object OkHttpDataAgentImpl : MovieDataAgent {
         TODO("Not yet implemented")
     }
 
+    override fun getMovieDetails(
+        movieId: String,
+        onSuccess: (MovieVO) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getCreditsByMovie(
+        movieId: String,
+        onSuccess: (Pair<List<ActorVO>, List<ActorVO>>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
     class GetNowPlayingMovieOkHttpTask(
         private val mOkHttpClient: OkHttpClient
     ) : AsyncTask<Void, Void, MovieListResponse>() {

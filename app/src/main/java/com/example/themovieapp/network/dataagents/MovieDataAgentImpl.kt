@@ -53,6 +53,22 @@ object MovieDataAgentImpl : MovieDataAgent {
         TODO("Not yet implemented")
     }
 
+    override fun getMovieDetails(
+        movieId: String,
+        onSuccess: (MovieVO) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getCreditsByMovie(
+        movieId: String,
+        onSuccess: (Pair<List<ActorVO>, List<ActorVO>>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
     class GetNowPlayingMovieTask() : AsyncTask<Void, Void, MovieListResponse?>() {
         override fun doInBackground(vararg p0: Void?): MovieListResponse? {
             val url: URL

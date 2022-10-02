@@ -41,5 +41,4 @@ data class ActorVO(
 
     @SerializedName("order")
     val order: Int?,
-
     )
