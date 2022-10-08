@@ -3,6 +3,7 @@ package com.example.themovieapp.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.themovieapp.R
@@ -225,6 +226,17 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
 //            Snackbar.LENGTH_LONG
 //        ).show()
         startActivity(MovieDetailsActivity.newIntent(this, movieId = movieId))
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menuSearch -> {
+                startActivity(MovieSearchActivity.newIntent(this))
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
 
