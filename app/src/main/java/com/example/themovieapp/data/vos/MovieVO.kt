@@ -88,7 +88,7 @@ data class MovieVO(
 
     @SerializedName("revenue")
     @ColumnInfo(name = "revenue")
-    val revenue: Int?,
+    val revenue: String?,
 
     @SerializedName("status")
     @ColumnInfo(name = "status")
