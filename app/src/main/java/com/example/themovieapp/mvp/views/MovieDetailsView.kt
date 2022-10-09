@@ -1,4 +1,10 @@
 package com.example.themovieapp.mvp.views
 
-interface MovieDetailsView {
+import com.example.themovieapp.data.vos.ActorVO
+import com.example.themovieapp.data.vos.MovieVO
+
+interface MovieDetailsView : BaseView {
+    fun showMovieDetails(movie: MovieVO)
+    fun showCreditsByMovie(cast: List<ActorVO>, crew : List<ActorVO>)
+    fun navigateBack()
 }
