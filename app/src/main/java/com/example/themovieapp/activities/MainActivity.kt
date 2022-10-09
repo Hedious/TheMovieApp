@@ -3,6 +3,7 @@ package com.example.themovieapp.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -53,7 +54,10 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
 
         //Observe Live Data
         observeLiveData()
+
     }
+
+
 
     private fun setUpViewModel() {
         mViewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -159,5 +163,14 @@ class MainActivity() : AppCompatActivity(), BannerViewHolderDelegate, ShowcaseVi
         startActivity(MovieDetailsActivity.newIntent(this, movieId = movieId))
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menuSearch -> {
+                startActivity(MovieSearchActivity.newIntent(this))
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }
