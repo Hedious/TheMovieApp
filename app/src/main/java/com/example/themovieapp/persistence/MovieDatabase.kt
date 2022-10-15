@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.themovieapp.data.vos.MovieVO
 import com.example.themovieapp.persistence.daos.MovieDao
 
-@Database(entities = [MovieVO::class], version = 2, exportSchema = false)
+@Database(entities = [MovieVO::class], version = 3, exportSchema = false)
 abstract class MovieDatabase : RoomDatabase(){
     companion object {
         const val DB_NAME = "THE_MOVIE_DB"

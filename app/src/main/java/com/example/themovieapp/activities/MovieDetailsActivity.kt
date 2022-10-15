@@ -15,7 +15,6 @@ import com.example.themovieapp.utils.IMAGE_BASE_URL
 import com.example.themovieapp.viewpods.ActorListViewPod
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_movie_details.*
-import kotlinx.android.synthetic.main.view_holder_movie.*
 
 class MovieDetailsActivity : AppCompatActivity() {
     //View Pods
