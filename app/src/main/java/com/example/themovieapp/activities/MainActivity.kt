@@ -20,8 +20,6 @@ import com.example.themovieapp.delegate.MovieViewHolderDelegate
 import com.example.themovieapp.delegate.ShowcaseViewHolderDelegate
 import com.example.themovieapp.dummy.dummyGenreList
 import com.example.themovieapp.mvvm.MainViewModel
-import com.example.themovieapp.network.dataagents.MovieDataAgentImpl
-import com.example.themovieapp.network.dataagents.OkHttpDataAgentImpl
 import com.example.themovieapp.viewpods.ActorListViewPod
 import com.example.themovieapp.viewpods.MovieListViewPod
 import com.google.android.material.snackbar.Snackbar
